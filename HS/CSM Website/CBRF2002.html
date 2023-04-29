@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CBRF.2002</title>
+<!--
+	Copyrighted by Charles Fabian, Shandy Cruzada, Mariah Catalan 2019
+	this content created by us individuals, and only us. all codes are typed. we own no images in this site we created.
+	images are subjected to copyright by its respective owners and have their rights reserved as with their site //unsplash.com//.
+	site design inspired by various pictures on google
+	this will be only used on the presentation of webpage in ICT Mapagpunyagi
+	and also be our training in terms of creating a website with up to two languages in one
+	such as HTML itself, and Cascading Style Sheets or CSS.
+-->
+<!-- CSS Styles, Most hussle, stressful and complicated part next to JavaScript but I will not use JavaScript this time.-->
+<style type="text/css">
+	/* Canvas/Screen */
+	@media screen (max-width: 1000px){
+		
+	}
+	@media screen (min-width: 700px) {
+		
+	}
+	@media screen and (max-width: 800px) .gallery_section {
+		flex: 50%;
+		max-width: 50%;
+	}
+	/* True body */
+	body {
+		background-image: url("../CBRF2002/Asseetttsss/IMG_3598.jpg");
+		background-color: #808080;
+		background-size: cover;
+		min-width: 1100px;
+		min-height: 1100px;
+	}
+	/* Main Body */
+	.container {
+		width: 90%;
+		margin: 3% auto 0 auto;
+		background-color: #FFFFFF;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		box-shadow: 0px 0px 15px 0px black;
+	}
+	/* Header */
+	.klaseheader {
+	width: 100%;
+	background-color: #E1E1E1;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	padding-bottom: 10px;
+	}
+	/* Logo */
+	.logo {
+		width: 16%;
+		padding-top: 4px;
+		padding-left: 2%;
+	}
+	.logo img {
+		width: 70%;
+	}
+	/* Navigation or nav */
+	.links {
+		position: relative;
+		bottom: 9px;
+		width: 50%;
+		float: right;
+		padding-top: 2.5%;
+		padding-right: 3%;
+		text-align: right;
+	}
+	.links a {
+		text-decoration: none;
+		color: #505050;
+		font-family: Helvetica Light, Arial, "sans-serif";
+		padding-left: 8%;
+		font-weight: lighter;
+		font-stretch: expanded;
+		font-size: 100%;
+	}
+	.links b {
+		font-weight: 900;
+	}
+	/* Top Content "Headline" */
+	.headline {
+		padding: 2%
+	}
+	/* Headline Article */
+	.title h1, h2 {
+		text-align: center;
+		font-family: Helvetica, Arial, "sans-serif";
+		font-weight: 500;
+		font-stretch: expanded;
+	}
+	.title h1 {
+		font-size: 28px;
+		letter-spacing: 6px;
+	}
+	.title h2 {
+		position: relative;
+		bottom: 15px;
+		font-size: 16px;
+		letter-spacing: 4px;
+	}
+	/* Article */
+	#article {
+		column-count: 2;
+		column-rule:thick;
+		column-fill: balance;
+		column-gap: 60px;
+		font-family: Helvetica, Arial, "sans-serif";
+		font-weight: 300;
+		color: #808080;
+	}
+	/* Three containers */
+	.continental_container {
+		clear: both;
+		display: inline-block;
+		width: 100%;
+		position: relative;
+		top: 10px;
+		bottom: 5px;
+		background-color: #FEFEFE;
+		margin-top: -5px;
+		margin-bottom: 0px;
+		border-top: solid;
+		border-top-color: #DDDDDD;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	.containerss_main {
+		padding: 10px;
+	}
+	.sliders {
+		align-content: center;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		overflow-x: auto;
+		padding-bottom: 0px;
+	}
+	.sections_containers {
+		width: 300px;
+		height: 100%;
+		flex-shrink: 0;
+		float: left;
+		text-align: center;
+		margin-top: 10px;
+		background-color: #E1E1E1;
+		margin-left: 25px;
+		margin-right: 2%;
+		padding-top: 0px;
+		border-radius: 20px;
+	}
+	.sections_containers img {
+		width: 300px;
+		height: 300px;
+		border-radius: 20px;
+		object-fit: cover;
+	}
+	.sections_containers h4 {
+		font-family: Helvetica, Arial, "sans-serif";
+		letter-spacing: 2px;
+		color: #505050;
+		padding-left: 8%;
+		text-align: left;
+		margin: 2%;
+		
+	}
+	.tagline_container {
+		font-family: Helvetica, Arial, "sans-serif";
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 2px;
+		position: relative;
+		margin-left: 2%;
+		text-align: left;
+		padding-left: 8%;
+		color: #606060;
+		margin-right: 8%;
+	}
+	.text_in_container {
+		font-family: Helvetica, Arial, "sans-serif";
+		text-align: left;
+		padding-left: 8%;
+		padding-right: 8%;
+		font-size: 13px;
+		color: #606060;
+		margin-left: 2%;
+	}
+	.price {
+		background-color: #FAFAFA;
+		height: 60px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		border-bottom: 4px solid #505050;
+	}
+	.price_tag {
+		font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+		font-weight: 500;
+		position: relative;
+		top: 25%;
+		text-align: center;
+		letter-spacing: 2px;
+		font-size: 24px;
+		color: #606060;
+	}
+	/* Gallery */
+	.gallery_master {
+		background-color: #FFFFFF;
+		display: grid;
+		grid-template-columns: repeat (8, 1fr);
+		grid-template-rows: repeat (8, 8vw);
+		grid-gap: 15px;
+	}
+	.gallery_section {
+		clear: both;
+		margin: 0 auto 0 auto;
+		flex: 50%;
+		padding: 0 4px;
+	}
+	.gallery_section h2 {
+		font-family: Helvetica, Arial, "sans-serif";
+		margin: 8% auto;
+		text-align: center;
+		font-size: 28px;
+	}
+	.gallery_images {
+		
+	}
+	.LogoCBRF {
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+		font-weight: 300;
+		font-size: 28px;
+		margin-top: 5px;
+		margin-bottom: 0px;
+	}
+	.LogoCBRF b {
+		font-weight: 500;
+	}
+</style>
+</head>
+
+<!-- The Body Tag
+	Kakayanin ko to
+		Waaaaaahhh -->
+
+<body>
+	<div class="container">
+		<!-- Header -->
+		<div class="klaseheader">
+			<nav class="links">
+				<b><a href="#" title="itit">H O M E</a></b><a href="#" title="ikik">A B O U T</a><a href="#" title="ipip">B L O G</a><a href="#" title="ipip">C O N T A C T</a>
+			</nav>
+			<header class="logo">
+				<p class="LogoCBRF"><b>CBRF.</b>2002</p>
+			</header>
+		</div>
+		<!-- Top Content "Headline" -->
+		<div class="headline">
+			<img src="../CBRF2002/BETACOVER.png" style="width: 100%; border-radius: 20px" alt="Keyboard and Mouse/nBAKIT NAWAWALA ANG PIC???">
+			<div class="title">
+				<h1>PORTFOLIO PAGE</h1>
+				<h2>PHOTOGRAPHY, VIDEOGRAPHY, 3D COMPUTER GRAPHICS</h2>
+			</div>
+			<!-- Article na mismo... palitan ang nilalaman la ako maisip sad -->
+			<article id="article">
+			  <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede.<br>
+			    <br>
+			    Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede.<br>
+  <br>
+			    Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus consequat consequat. Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue</p>
+			  <p>&nbsp;Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Proin pharetra nonummy pede. Mauris et orci.</p>
+<p><br>
+	    Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc ac magna. Maecenas odio dolor, vulputate vel, auctor ac, accumsan id, felis. Pellentesque cursus sagittis felis. Pellentesque porttitor, velit lacinia egestas auctor, diam eros tempus arcu, nec vulputate augue magna vel risus. Cras non magna vel ante adipiscing rhoncus. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. <br>
+	    </p>
+            </article>
+		</div>
+		<!-- What this "site" sell/offer // KAKASTRESS TO //-->
+		<div class="continental_container">
+			<div class="containerss_main">
+				<div class="sliders">
+					<!-- Container 1-->
+					<div class="sections_containers">
+						<img src="../CBRF2002/Asseetttsss/FEATUREDPORTRAIT/IMG_1886.jpg" alt="phone na may lens at mouse at airpods">
+						
+						<div class="price">
+							<p class="price_tag">Portraiture</p>
+						</div>
+					</div>
+					<!-- Container 2-->
+					<div class="sections_containers">
+						<img src="../CBRF2002/Asseetttsss/DEBUTSS/EKM (6).jpg" alt="laptop">
+						<div class="price">
+							<p class="price_tag">Events</p>
+						</div>
+					</div>
+					<!-- Container 3-->
+					<div class="sections_containers">
+						<img src="../CBRF2002/Asseetttsss/GRADS/IMG_2840 copy.png" alt="Nikon Camera na may telephoto lens">
+						<div class="price">
+							<p class="price_tag">Graduation</p>
+						</div>
+					</div>
+					<!-- Container 4 -->
+					<div class="sections_containers">
+						<img src="../../Documents/Blender/Renders/DigiClock/CLOCK.png">
+						<div class="price">
+							<p class="price_tag">3D Modeling</p>
+						</div>
+					</div>
+					<!-- Container 5 -->
+					<div class="sections_containers">
+						<img src="../../Documents/Blender/Renders/Store/SStore1.png" alt="Nikon Camera na may telephoto lens">
+						<div class="price">
+							<p class="price_tag">3D Environments</p>
+						</div>
+					</div>
+					<!-- Container 6 -->
+					<div class="sections_containers">
+						<img src="../CBRF2002/Asseetttsss/IMG_8333.jpg" alt="Nikon Camera na may telephoto lens">
+						<div class="price">
+							<p class="price_tag">Landscapes</p>
+						</div>
+					</div>
+					<div class="sections_containers">
+						<img src="Pectur/Cupcake/7.jpg" style="width: 100%;" alt="Nikon Camera na may telephoto lens">
+						<h4>White Love</h4>
+						<p class="tagline_container">A budget-friendly cupcake to fill your day!</p>
+						<p class="text_in_container">Maecenas pede purus, tristique ac, tempus eget, egestas quis, mauris. Curabitur non eros. Nullam hendrerit bibendum justo. Fusce iaculis, est quis lacinia pretium, pede metus molestie lacus, at gravida wisi ante at libero.</p>
+						<div class="price">
+							<p class="price_tag">₱230</p>
+						</div>
+					</div>
+					<div class="sections_containers">
+						<img src="Pectur/Cupcake/8.jpg" style="width: 100%;" alt="Nikon Camera na may telephoto lens">
+						<h4>Elegant Mocha</h4>
+						<p class="tagline_container">Energy-giving cupcake with relaxing taste</p>
+						<p class="text_in_container">Maecenas pede purus, tristique ac, tempus eget, egestas quis, mauris. Curabitur non eros. Nullam hendrerit bibendum justo. Fusce iaculis, est quis lacinia pretium, pede metus molestie lacus, at gravida wisi ante at libero.</p>
+						<div class="price">
+							<p class="price_tag">₱750</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>&nbsp;
+	</div>
+</body>
+</html>
