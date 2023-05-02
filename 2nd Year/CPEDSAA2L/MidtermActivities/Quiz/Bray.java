@@ -1,4 +1,4 @@
-package activity;
+package Quiz;
 //Fabian, Charles Bryan R. - CPE - 211
 public class Bray {
     public static void main(String[] args) {
