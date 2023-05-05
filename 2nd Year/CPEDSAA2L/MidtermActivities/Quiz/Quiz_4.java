@@ -10,7 +10,7 @@ package Quizzes;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class Quiz_3 {
+public class Quiz_4 {
 
     public static void main(String[] args) {
         //array
