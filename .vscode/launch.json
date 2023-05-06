@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Array_Activity_2",
+      "request": "launch",
+      "mainClass": "MidtermActivities.Array_Activity_2",
+      "projectName": "cbrf2002-CollegeArchives_bac57682"
+    },
+    {
+      "type": "java",
+      "name": "Activity_1_2",
+      "request": "launch",
+      "mainClass": "MidtermActivities.Activity_1_2",
+      "projectName": "cbrf2002-CollegeArchives_bac57682"
+    },
+    {
+      "type": "java",
+      "name": "Activity_CPDSAA2L",
+      "request": "launch",
+      "mainClass": "activity_cpdsaa2l.Activity_CPDSAA2L",
+      "projectName": "cbrf2002-CollegeArchives_bac57682"
+    },
+    {
+      "type": "java",
       "name": "Quiz_4",
       "request": "launch",
       "mainClass": "Quiz.Quiz_4"
