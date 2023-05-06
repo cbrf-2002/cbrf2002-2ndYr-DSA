@@ -146,8 +146,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/cbrf2002/Documents/cbrf2002-CollegeArchives/Personal Projects/C++",
-      "program": "c:/Users/cbrf2002/Documents/cbrf2002-CollegeArchives/Personal Projects/C++/build/Debug/outDebug",
+      "cwd": "c:/Users/cbrf2002/Documents/cbrf2002-CollegeArchives",
+      "program": "c:/Users/cbrf2002/Documents/cbrf2002-CollegeArchives/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
