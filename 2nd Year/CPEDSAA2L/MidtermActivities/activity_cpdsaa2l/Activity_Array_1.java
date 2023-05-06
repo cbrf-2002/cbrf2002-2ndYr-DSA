@@ -1,4 +1,4 @@
-package cbrf2002.activity_cpdsaa2l;
+package activity_cpdsaa2l;
 
 
 /**
