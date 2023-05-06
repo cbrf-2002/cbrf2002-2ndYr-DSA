@@ -1,4 +1,4 @@
-package Quizzes;
+package Quiz;
 
 /**
  *
