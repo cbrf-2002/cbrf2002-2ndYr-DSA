@@ -7,10 +7,25 @@ package FinalsActivities;
  * 
  */
 
+import java.util.Stack;
+
 
 public class Activity1 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Stack <Character> color = new Stack<>();
+        
+        color.add('L');
+        color.add('R');
+        color.add('T');
+        
+        System.out.println("CONTAINS: " + color.contains('R'));
+        System.out.println("PEEK: " + color.peek());
+        System.out.println("ORIG: " + color);
+        
+        char abc = color.pop();
+        
+        System.out.println("REMOVE: " + abc);
+        System.out.println("NEWLIST: " + color);
     }
 }
