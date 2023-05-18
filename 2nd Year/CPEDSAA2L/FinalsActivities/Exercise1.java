@@ -10,7 +10,7 @@ package FinalsActivities;
 import java.util.Stack;
 
 
-public class Activity1 {
+public class Exercise1 {
 
     public static void main(String[] args) {
         Stack <Character> color = new Stack<>();
