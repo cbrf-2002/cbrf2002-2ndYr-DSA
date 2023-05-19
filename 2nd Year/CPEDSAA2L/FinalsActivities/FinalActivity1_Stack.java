@@ -72,7 +72,7 @@ public class FinalActivity1_Stack {
         if (!stackElement.isEmpty()) {
             System.out.println("\nOriginal Stack List: " + stackElementOriginal);
         } else {
-            System.out.println("\nOriginal Stack List: Is empty...);
+            System.out.println("\nOriginal Stack List: Is empty...");
         }
     }
     public static void inserting() {
