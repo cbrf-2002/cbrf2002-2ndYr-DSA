@@ -5,68 +5,44 @@ import java.util.Stack;
 public class FinalActivity1_Stack {
     static Stack<Integer> stackElementOriginal = new Stack<>();
     static Stack<Integer> stackElement = new Stack<>();
-    static Scanner a = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        //declare
-        boolean booler = false;
-        boolean booo = false;
-        stackElementOriginal.addAll(Arrays.asList(3,14,15,92,65,35));
+        stackElementOriginal.addAll(Arrays.asList(3, 14, 15, 92, 65, 35));
         stackElement.addAll(stackElementOriginal);
         char conter;
-        //title
-        System.out.println("------------------------------------------------------------------------");
-        System.out.println("                  Stack Implementation by Charles Fabian");
-        System.out.println("------------------------------------------------------------------------");
-        //loop
         do {
-            do {
-                booler = loopStatement(booler);
-            } while (!booler);
-            System.out.print("\nDo you want to continue? (y or n): ");
-            conter = a.next().charAt(0);
-            switch (conter) {
-                case 'y':
-                case 'Y':
-                    break;
-                case 'n':
-                case 'N':
-                    booo = true;
-                    break;
-                default:
-                    System.out.println("Invalid input");
-            }
-
-        } while (!booo);
-        //bye
+            mainMenu();
+            System.out.print("\nDo you want to continue? (y to continue, press any other keys to end): ");
+            conter = scanner.next().charAt(0);
+        } while (conter == 'y' || conter == 'Y');
         System.out.println("\nDone! Thank you for using!");
-        a.close();
+        scanner.close();
     }
-    public static boolean loopStatement(boolean booler) {
+    public static boolean mainMenu() {
         System.out.print("\nChoose any number (1-4) from the following operations:");
-            System.out.print("\n\t1. Display the Original Elements of the Stack");
-            System.out.print("\n\t2. Insert an element");
-            System.out.print("\n\t3. Pop an element");
-            System.out.print("\n\t4. Peek of the stack");
-            System.out.print("\nEnter here: ");
-            int choice = a.nextInt();
-            //switch
-            switch (choice) {
-                case 1:
-                    displaying();
-                    return true;
-                case 2:
-                    inserting();
-                    return true;
-                case 3:
-                    popping();
-                    return true;
-                case 4:
-                    peeker();
-                    return true;
-                default:
-                    System.out.println("Invalid input, please try again.\n\n\n\n\n");
-                    return false;
-            }
+        System.out.print("\n\t1. Display the Original Elements of the Stack");
+        System.out.print("\n\t2. Insert an element");
+        System.out.print("\n\t3. Pop an element");
+        System.out.print("\n\t4. Peek of the stack");
+        System.out.print("\nEnter here: ");
+        int choice = scanner.nextInt();
+        switch (choice) {
+            case 1:
+                displaying();
+                return true;
+            case 2:
+                inserting();
+                return true;
+            case 3:
+                popping();
+                return true;
+            case 4:
+                peeker();
+                return true;
+            default:
+                System.out.println("Invalid input, please try again.\n");
+                return false;
+        }
     }
     public static void displaying() {
         if (!stackElement.isEmpty()) {
@@ -77,7 +53,7 @@ public class FinalActivity1_Stack {
     }
     public static void inserting() {
         System.out.print("\nEnter an integer to insert in stack: ");
-        int insertion = a.nextInt();
+        int insertion = scanner.nextInt();
         stackElement.push(insertion);
         System.out.println("\nNEW stack list: " + stackElement);
     }
