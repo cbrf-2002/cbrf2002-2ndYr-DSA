@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "FinalActivity1_Stack",
+      "request": "launch",
+      "mainClass": "FinalsActivities.FinalActivity1_Stack",
+      "projectName": "cbrf2002-CollegeArchives_bac57682"
+    },
+    {
+      "type": "java",
       "name": "Assignment1_sortStack",
       "request": "launch",
       "mainClass": "FinalsActivities.Assignment1_sortStack",
