@@ -1,4 +1,5 @@
 import sympy as s
+from sympy import symbols, sympify
 import sys
 import numpy as np
 
