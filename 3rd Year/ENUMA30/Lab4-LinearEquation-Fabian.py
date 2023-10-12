@@ -31,7 +31,7 @@ def equation_and_variable():
         print(f'\nYou may enter variables ({variable_symbols}) [e.g. 12*w - 5*x + 2*y - 3*z = -64]\n')
     return number_equations, variable_symbols #returns number_equations and variable_symbols to be used later.
     
-def enter_equations(funcs, constants): #lets the user input equations in the same manner as previous methods. Uses parameters to fetch funcs and constants lists
+def enter_equations(funcs, constants, number_equations): #lets the user input equations in the same manner as previous methods. Uses parameters to fetch funcs and constants lists
     for i in range(number_equations): #starts a loop that will use the value returned from equation_and_variable()
         func = str(input(f'\tEnter Equation {i + 1}:\t'))
         lhs, rhs = func.replace(" ", "").split("=") #splits the equation into left- and right-side
@@ -110,7 +110,7 @@ def main():
     
     funcs = [] #initiates func list to be used as container for equations
     constants = [] #initiates constants list to be used as container for constants
-    funcs, constants = enter_equations(funcs, constants) #initiates equation input and uses both func and constants lists
+    funcs, constants = enter_equations(funcs, constants, number_equations) #initiates equation input and uses both func and constants lists
     const_matrix = np.array(constants, dtype=float) #converts the constants[] into a matrix as well as the coeffs[] in the next line, also makes sure that it is float by converting the data
     coeff_matrix = np.array([[func.coeff(symbol) for symbol in variable_symbols] for func in funcs], dtype=float)
     #creates the coeff matrix from the following:
