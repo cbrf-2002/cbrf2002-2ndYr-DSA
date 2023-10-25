@@ -1,37 +1,47 @@
-import sympy as s
-import numpy as np
+import math
 
-print('Welcome to the Numerical Integration\n\n')
-x = s.Symbol('x')
+fsmp = input("Enter function:\t")
+f = lambda x: eval(fsmp)
 
-func = input('Enter function:\t\t\t')
-hval = int(input('Enter upper limit:\t\t'))
-lval = int(input('Enter lower limit:\t\t'))
-tol = float(input('Enter tolerance:\t\t'))
-f = s.sympify(func)
+a = float(input("Enter lower limit:\t"))
+b = float(input("Enter upper limit:\t"))
+tol = float(input("Enter tolerance:\t"))
+etol = 100;
 
-old_trapezoidal = 0
-for n in range(1,10000):
-    h = (hval - lval) / n
-    xi = [lval + i * h for i in range(n + 1)]
-    tfxi = [f.subs(x, xi[i]).evalf() for i in range (n + 1)]
-    trapezoidal = (h / 2) * (tfxi[0] + (2 * np.sum(tfxi[1:-1])) + tfxi[-1])
-    ttol = abs(trapezoidal - old_trapezoidal)
-    if ttol < tol:
-        print(f'The area for {func} is {trapezoidal} sq. units using Trapezoidal Rule at {n} slices.')
-        break
-    else:
-        old_trapezoidal = trapezoidal
+def trapezoidal(f, a, b, tol, etol):
+    n = 1; old = 0
+    while etol > tol:
+        h = (b-a)/n
+        sums = 0
+        for i in range(1, n):
+            sums += 2 * f(a + i * h)
 
-old_simpsons = 0
-for n in range(1,10000,2):
-    h = (hval - lval) / n
-    xi = [lval + i * h for i in range(n + 1)]
-    sfxi = [f.subs(x, xi[i]).evalf() for i in range (n + 1)]
-    simpsons = (h / 3) * (sfxi[0] + (4 * np.sum(sfxi[2:-1:2])) + (2 * np.sum(sfxi[1:-1:2])) + sfxi[-1])
-    stol = abs(simpsons - old_simpsons)
-    if stol < tol:
-        print(f'The area for {func} is {simpsons} sq. units using Simpsons Rule at {n} slices.')
-        break
-    else:
-        old_simpsons = simpsons
+        traps = round((h/2)*(f(a)+sums+f(b)),6)
+        etol = abs((traps - old)/traps)
+
+        old = traps
+        n += 1
+
+    print(f'The area for \'{fsmp}\' is {traps} sq. units using Trapezoidal Rule at {n} slices.')
+
+def simpsons(f, a, b, tol, etol):
+    n = 2; old = 0
+    while etol > tol:
+        h = (b-a)/n
+        sums = 0
+        for i in range(1, n):
+            if i % 2 == 0:
+                sums += 2 * f(a + i * h)
+            else:
+                sums += 4 * f(a + i * h)
+
+        simps = round((h/3)*(f(a)+sums+f(b)),6)
+        etol = abs((simps - old)/simps)
+
+        old = simps
+        n += 2
+
+    print(f'The area for \'{fsmp}\' is {simps} sq. units using Simpsons Rule at {n} slices.')
+
+trapezoidal(f, a, b, tol, etol)
+simpsons(f, a, b, tol, etol)
